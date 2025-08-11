@@ -5,6 +5,21 @@
       "pack": "attaquer-solid-ts",
       "widget": "top-bar",
       "preset": "default"
+    },
+    {
+      "pack": "attaquer",
+      "widget": "top-bar",
+      "preset": "default"
+    },
+    {
+      "pack": "attaquer",
+      "widget": "top-bar",
+      "preset": "1080p"
+    },
+    {
+      "pack": "attaquer",
+      "widget": "top-bar",
+      "preset": "1440p"
     }
   ]
 }

@@ -16,6 +16,7 @@ const Application: Component<ApplicationProps> = (props) => {
     handleClick();
     props.glazewm.runCommand(
       `shell-exec %userprofile%/.glzr/zebar/attaquer-solid-ts/dist/assets/scripts/FocusWindow.ahk ${props.window.handle}`,
+      // `shell-exec %userprofile%/AppData/Roaming/zebar/downloads/iattaquer.attaquer@1.0.1/dist/assets/scripts/FocusWindow.ahk ${props.window.handle}`,
     );
   };
 
