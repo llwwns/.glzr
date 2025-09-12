@@ -55,7 +55,7 @@ function App() {
       </div>
       <div class="right">
         <Systray systray={output.systray} glazewm={output.glazewm} />
-        <KeyboardStatus keyboard={output.keyboard} />
+        {output.keyboard && <KeyboardStatus keyboard={output.keyboard} />}
         <CpuStatus cpu={output.cpu} glazewm={output.glazewm} />
         <MemoryStatus memory={output.memory} />
         {output.weather && <WeatherStatus weather={output.weather} />}
