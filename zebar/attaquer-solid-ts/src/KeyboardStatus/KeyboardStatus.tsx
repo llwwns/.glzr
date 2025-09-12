@@ -23,13 +23,9 @@ const KeyboardStatus: Component<KeyboardStatusProps> = (props) => {
     >
       <span class="content">
         <span class="i">{"\uf11c"}&nbsp;</span>
-        <div class="labels">
-          <span class="label">
-            {props.keyboard.layout.substring(0, 2)}
-          </span>
-        </div>
+        <span class="mem-bar">{props.keyboard.layout.substring(0, 2)}</span>
       </span>
-    </button>
+    </button >
   );
 };
 
