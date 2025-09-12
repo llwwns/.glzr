@@ -10,6 +10,7 @@ const providers = zebar.createProviderGroup({
   network: { type: "network", refreshInterval: "2000" },
   battery: { type: "battery", refreshInterval: "10000" },
   date: { type: "date", formatting: "HH:mm" },
+  keyboard: { type: "keyboard" },
 });
 
 createRoot(document.getElementById("root")).render(<App />);
@@ -522,6 +523,21 @@ function App() {
               )}
             </div>
           ))}
+        {output.keyboard && (
+          <button
+            className={`keyboard`}
+            onClick={() => {}}
+          >
+            <span className="content">
+              <span className="i">{"\uf11c"}&nbsp;</span>
+              <div className="labels">
+                <span className="label">
+                  {output.keyboard.layout.substring(0, 2)}
+                </span>
+              </div>
+            </span>
+          </button>
+        )}
         {output.cpu && (
           <button
             className={`cpu ${getCpuUsageRate(output.cpu)}`}
