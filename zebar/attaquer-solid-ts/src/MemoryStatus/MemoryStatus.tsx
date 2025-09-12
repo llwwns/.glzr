@@ -20,7 +20,8 @@ const MemoryStatus: Component<MemoryStatusProps> = (props) => {
 
   const handleMemoryClick = (e: MouseEvent) => {
     handleClick();
-    zebar.shellExec("C:\\Program Files\\Mem Reduct\\memreduct.exe");
+    zebar.shellExec("taskmgr"); // open task manager
+    // zebar.shellExec("C:\\Program Files\\Mem Reduct\\memreduct.exe");
   };
   return (
     <button

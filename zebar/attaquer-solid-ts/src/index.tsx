@@ -16,6 +16,7 @@ import MemoryStatus from "./MemoryStatus/MemoryStatus";
 import WeatherStatus from "./WeatherStatus/WeatherStatus";
 import NetworkStatus from "./NetworkStatus/NetworkStatus";
 import BatteryStatus from "./BatteryStatus/BatteryStatus";
+import KeyboardStatus from "./KeyboardStatus/KeyboardStatus";
 import TimeStatus from "./Time/TimeStatus";
 import Systray from "./Systray/Systray";
 
@@ -30,6 +31,7 @@ const providers = zebar.createProviderGroup({
   media: { type: "media" },
   audio: { type: "audio" },
   systray: { type: "systray" },
+  keyboard: { type: "keyboard" },
 });
 
 render(() => <App />, document.getElementById("root")!);
@@ -53,6 +55,7 @@ function App() {
       </div>
       <div class="right">
         <Systray systray={output.systray} glazewm={output.glazewm} />
+        <KeyboardStatus keyboard={output.keyboard} />
         <CpuStatus cpu={output.cpu} glazewm={output.glazewm} />
         <MemoryStatus memory={output.memory} />
         {output.weather && <WeatherStatus weather={output.weather} />}
